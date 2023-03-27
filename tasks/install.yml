@@ -1,0 +1,13 @@
+---
+- name: Install AIDE
+  ansible.builtin.apt:
+    name: aide
+    state: present
+
+- name: Initialize AIDE
+  ansible.builtin.command:
+    cmd: aide --init
+
+- name: Update AIDE database file
+  ansible.builtin.command:
+    cmd: mv /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz

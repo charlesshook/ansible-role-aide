@@ -1,2 +1,14 @@
 ---
-# defaults file for aide
+aide_install: false
+aide_config_cron: false
+
+aide_conf_dir: /etc
+aide_database_dir: /var/lib/aide
+aide_binary: /usr/sbin/aide
+
+aide_cron_minute: 0
+aide_cron_hour: 0
+aide_cron_day: "*"
+aide_cron_month: "*"
+aide_cron_weekday: "*"
+aide_cron_user: root
